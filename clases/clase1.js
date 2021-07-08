@@ -21,13 +21,6 @@ class Almacen{
         return producto
 
     }
-    async update(id,newProducto){
-        const oldProducto = this.getOne(id)
-        co
-        return producto
-
-    }
-
 }
 
 module.exports = Almacen

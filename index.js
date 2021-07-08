@@ -35,16 +35,6 @@ app.get('/productos/:id', async (req,res) =>{
     return res.send(producto)
 })
 
-app.put('/productos/:id', async (req,res) =>{
-    const producto = await myAlmacen.getOne(req.params.id)
-    if(!producto){
-        return res.send({error:'Producto no encontrado'})
-    }
-    const productoUpdated = await myAlmacen.update(req.params.id,req.body)
-    return res.send(productoUpdated)
-})
-
-
 const server = app.listen( PORT, () => {
     console.log(`Server running ${PORT}`)
 })
